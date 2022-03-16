@@ -10,7 +10,7 @@ The workspace is a polygon and each obstacle is a polygon (i.e., a polygonal hol
 ### Sweeping Trapezoidation Algorithm
 Consider a workspace in which the boundary is an axis-aligned rectangle and every obstacle vertex has a unique x-coordinate. i.e., no obstacle segment is vertical. Since all x-coordinates are unique, each line segment has a left endpoint and right endpoint, where the x-coordinate of the left endpoint is smaller than that of the right endpoint. To visualize the order in which the vertices are processed a sweeping vertical line is defined moving left to right. When the line hits an environment vertex, it is categorized into one of six types.
 
-(https://github.com/hae98/RobotMotionPlanning/blob/main/images/decomposition.png)
+![My image](https://github.com/hae98/RobotMotionPlanning/blob/main/images/decomposition.png)
 
 | Vertex Type | Vertex as Endpoint of Two Segments | Vertex as Convex or Non-Convex | 
 | ----------- | --------------------------------- | ------------------------------ |
