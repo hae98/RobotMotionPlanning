@@ -10,8 +10,7 @@ The workspace is a polygon and each obstacle is a polygon (i.e., a polygonal hol
 ### Sweeping Trapezoidation Algorithm
 Consider a workspace in which the boundary is an axis-aligned rectangle and every obstacle vertex has a unique x-coordinate. i.e., no obstacle segment is vertical. Since all x-coordinates are unique, each line segment has a left endpoint and right endpoint, where the x-coordinate of the left endpoint is smaller than that of the right endpoint. To visualize the order in which the vertices are processed a sweeping vertical line is defined moving left to right. When the line hits an environment vertex, it is categorized into one of six types.
 
-<p align="center">
-    | Vertex Type | Vertex as Endpoint of Two Segments | Vertex as Convex or Non-Convex | 
+| Vertex Type | Vertex as Endpoint of Two Segments | Vertex as Convex or Non-Convex | 
 | ----------- | --------------------------------- | ------------------------------ |
 |     (i)     |            left/left              |            convex              |
 |     (ii)    |            left/left              |          non-convex            |
@@ -19,7 +18,6 @@ Consider a workspace in which the boundary is an axis-aligned rectangle and ever
 |     (iv)    |           right/right             |          non-convex            |
 |     (v)     |           left/right              |            convex              |
 |     (vi)    |            left/right             |          non-convex            |
-</p>
 
 A list of obstacle segments intersected by the sweeping line is maintained and changes only when the sweeping line hits a new vertex. This list is then used to extend vertical segments upwards and downwards from the vertex to find intersection points above and blow them (if any). From there the left endpoints of the obstacle segments in the list can be updated and used to add zero, one, or two trapezoids to the set of trapezoids whose union equals the workspace polygon.
 
