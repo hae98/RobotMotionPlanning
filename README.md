@@ -28,6 +28,8 @@ The sweeping trapezoidation algorithm can be easily supplemented to additionally
 
 A roadmap is a graph that is described by a set of nodes and a set of edges. The most common way to represent the edge set is via a look-up table, or adjacency table, that is an array whose elements are lists of varying lengths. The lookup table contains the adjacency information as follows: the ith entry in the list is a list of all neighbors of node i. Each node of the graph has an associated polygonal path that connects the two centers through the midpoint of the common vertical segment.
 
+<img src="https://user-images.githubusercontent.com/68575242/158691972-f690c88f-6ac0-464d-8ee8-dc87c04e047a.png" width="650" height="500">
+
 ## Search Algorithms Over Graphs
 A path in the free workspace that has been decomposed into convex subsets and that is now equipped with a roadmap can be computed by first computing a path in the discrete roadmap.
 
