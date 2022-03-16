@@ -7,7 +7,7 @@ Algorihtms designed for robots that do not have sensors, but rather have access 
 ## Workspace Decompoistion
 The workspace is a polygon and each obstacle is a polygon (i.e., a polygonal hole inside the workspace). For complex non-convex environments, the sweeping trapezoidation algorithm is used to decompose the free workspace into the union of convex subsets, such as trapezoids. The trapezoidation of a polygon is the decomposition of the polygon into a collection of trapezoids.
 
-###### Sweeping Trapezoidation Algorithm
+### Sweeping Trapezoidation Algorithm
 Consider a workspace in which the bouary is an axis-aligned rectangle and every obstacle vertex has a unique x-coordinate. i.e., no obstacle segment is vertical. Since all x-coordinates are unique, each line segment has a left endpoint and right endpoint, where the x-coordinate of the left endpoint is smaller than that of the right endpoint. To visualize the order in which the vertices are processed a sweeping vertical line is defined moving left to right. When the line hits an environmnet vertex, it is categorized into one of size types.
 
 | Vertex Type | Vertex as Enpoint of Two Segments | Vertex as Convex or Non-Convex | 
