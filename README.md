@@ -10,7 +10,8 @@ The workspace is a polygon and each obstacle is a polygon (i.e., a polygonal hol
 ### Sweeping Trapezoidation Algorithm
 Consider a workspace in which the boundary is an axis-aligned rectangle and every obstacle vertex has a unique x-coordinate. i.e., no obstacle segment is vertical. Since all x-coordinates are unique, each line segment has a left endpoint and right endpoint, where the x-coordinate of the left endpoint is smaller than that of the right endpoint. To visualize the order in which the vertices are processed a sweeping vertical line is defined moving left to right. When the line hits an environment vertex, it is categorized into one of six types.
 
-| Vertex Type | Vertex as Endpoint of Two Segments | Vertex as Convex or Non-Convex | 
+<p align="center">
+    | Vertex Type | Vertex as Endpoint of Two Segments | Vertex as Convex or Non-Convex | 
 | ----------- | --------------------------------- | ------------------------------ |
 |     (i)     |            left/left              |            convex              |
 |     (ii)    |            left/left              |          non-convex            |
@@ -18,10 +19,13 @@ Consider a workspace in which the boundary is an axis-aligned rectangle and ever
 |     (iv)    |           right/right             |          non-convex            |
 |     (v)     |           left/right              |            convex              |
 |     (vi)    |            left/right             |          non-convex            |
+</p>
 
 A list of obstacle segments intersected by the sweeping line is maintained and changes only when the sweeping line hits a new vertex. This list is then used to extend vertical segments upwards and downwards from the vertex to find intersection points above and blow them (if any). From there the left endpoints of the obstacle segments in the list can be updated and used to add zero, one, or two trapezoids to the set of trapezoids whose union equals the workspace polygon.
 
-<img src="https://user-images.githubusercontent.com/68575242/158691557-1446183e-867b-4d07-97a0-e8e7ff1270ac.png" width="650" height="500">
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68575242/158691557-1446183e-867b-4d07-97a0-e8e7ff1270ac.png" width="650" height="500">
+</p>
 
 ## Navigation on Roadmaps
 The sweeping trapezoidation algorithm can be easily supplemented to additionally provide a list of neighborhood relationships between trapezoids. As a result of this, an easy-to-navigate roadmap is obtained specified as follows: a collection of center points (one for each trapezoid) and a collection of paths connecting center points (each being composed of 2 segments, connecting a center to midpoint and the same midpoint to a distinct center). Given the decomposition of a workspace into a collection of trapezoids whose edges are defined as follows: there exists an edge between any two trapezoids if and only if the two trapezoids share a vertical segment.
@@ -42,5 +46,8 @@ The breadth-first search algorithm is one of the simplest graph search strategie
 
 If a path exists in the graph from the start to goal point, then the BFS algorithm and the extract-path algorithm will find the shortest such path; if a path does not exist, the algorithm returns a failure notice; in any case, the algorithm completes in a finite number of steps.
 
-<img src="https://user-images.githubusercontent.com/68575242/158692026-c16251ca-0a5d-4a1e-b9c0-d03017ce771b.png" width="650" height="500">
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/68575242/158692026-c16251ca-0a5d-4a1e-b9c0-d03017ce771b.png" width="650" height="500">
+</p>
+
 
