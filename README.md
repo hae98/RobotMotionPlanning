@@ -1,5 +1,5 @@
 # Robot Motion Planning
-Robot Motion Planning algorithms allow a robot to find a path from a source to a destination in a region that contains pre-defined obstacles. 
+Robot Motion Planning algorithms allow robot to find a path from a source to a destination in a region that contains pre-defined obstacles. 
 
 ## Open-Loop/Feedforward Planning
 Algorithms designed for robots that do not have sensors, but rather have access to a map of the environment or knowledge of the free workspace. Planning is a sequence of pre-computed steps.
