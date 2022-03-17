@@ -48,4 +48,9 @@ If a path exists in the graph from the start to goal point, then the BFS algorit
     <img src="https://user-images.githubusercontent.com/68575242/158692026-c16251ca-0a5d-4a1e-b9c0-d03017ce771b.png" width="650" height="500">
 </p>
 
+## Running Instructions
+1. Define workspace and obstacles vertices in workspace_data.m.
+2. In main.m file define desired filename of motion planning gif on line 99.
+3. Run the main.m file with MATLAB software.
+4. Input a start and goal point in command window when prompted.
 
