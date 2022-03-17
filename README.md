@@ -45,7 +45,7 @@ The breadth-first search algorithm is one of the simplest graph search strategie
 If a path exists in the graph from the start to goal point, then the BFS algorithm and the extract-path algorithm will find the shortest such path; if a path does not exist, the algorithm returns a failure notice; in any case, the algorithm completes in a finite number of steps.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/68575242/158692026-c16251ca-0a5d-4a1e-b9c0-d03017ce771b.png" width="650" height="500">
+    <img src="https://user-images.githubusercontent.com/68575242/158890381-ffc0cbfa-c8b5-40ec-bf15-02c80a2cb71f.gif" width="650" height="500">
 </p>
 
 ## Running Instructions
